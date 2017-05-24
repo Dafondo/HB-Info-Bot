@@ -21,7 +21,7 @@ def bot_login():
     return reddit
 
 def run_bot(reddit):
-    subreddit = reddit.subreddit('plessytesty')
+    subreddit = reddit.subreddit(config.subreddit)
     print('Scanning posts')
 
     for submission in subreddit.new(limit=25):
@@ -118,7 +118,7 @@ def run_bot(reddit):
 
             submission.reply(comment)
 
-            keeps list of submissions already replied to in a .txt
+            # keeps list of submissions already replied to in a .txt
             submissions_replied_to.append(submission.id)
             with open('submissions_replied_to.txt', 'a') as f:
                 f.write(submission.id + '\n')
@@ -145,6 +145,4 @@ url_term = re.compile('https://www.humblebundle.com')
 url_exclude = re.compile('https://www.humblebundle.com/store')
 submissions_replied_to = get_saved_submissions()
 print(submissions_replied_to)
-
-while True:
-    run_bot(reddit)
+run_bot(reddit)
