@@ -10,7 +10,7 @@ This is a reddit bot that scans submissions on [/r/GameDeals](https://www.reddit
 
 
 ## How to use 
-1. Install python
+1. Install python (and required packages from requirements.txt)
 2. Create a reddit app [here](https://www.reddit.com/prefs/apps)
 3. Make a `config.py` file with necessary info. Here's an example:
 ```python

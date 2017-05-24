@@ -1,0 +1,6 @@
+beautifulsoup4==4.6.0
+lxml==3.7.3
+praw==4.5.1
+prawcore==0.10.1
+requests==2.14.2
+update-checker==0.16
